@@ -1,6 +1,10 @@
 {
   "name": "auto-gen-react",
-  "version": "1.0.0",
+  "version": "1.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuqinggang/auto-gen-react.git"
+  },
   "description": "",
   "main": "index.js",
   "bin": {
