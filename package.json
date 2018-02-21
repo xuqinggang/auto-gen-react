@@ -1,0 +1,19 @@
+{
+  "name": "auto-gen-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "auto-gen-react": "./bin/index.js"
+  },
+  "devDependencies": {
+  },
+  "author": "xuqinggang",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.14.1",
+    "cross-spawn": "^6.0.4",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^5.1.0"
+  }
+}
