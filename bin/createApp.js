@@ -2,6 +2,7 @@ const spawn = require('cross-spawn');
 const chalk = require('chalk');
 const inquirer = require('inquirer');
 const fse = require('fs-extra');
+const ora = require('ora');
 const fs = require('fs');
 const path = require('path');
 
@@ -76,7 +77,9 @@ function execDependencesInstall(projectName) {
 
 // 模板目录直接拷贝到项目目录
 function copyTemplageToProject() {
+    const spinner = ora('拷贝项目模板').start();
     fse.copySync(sourceDir, genDir);
+    spinner.succeed('模板拷贝结束');
 }
 
 // 修改项目里package.json的name属性

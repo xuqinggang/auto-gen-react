@@ -1,6 +1,6 @@
 {
   "name": "auto-gen-react",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "repository": {
     "type": "git",
     "url": "https://github.com/xuqinggang/auto-gen-react.git"
@@ -11,10 +11,10 @@
   "homepage": "https://github.com/xuqinggang/auto-gen-react#readme",
   "description": "create multiple app based es6+webpack, eg: react, react+redux",
   "keywords": [
-      "npm",
-      "create-react-app",
-      "generate-react",
-      "react-cli"
+    "npm",
+    "create-react-app",
+    "generate-react",
+    "react-cli"
   ],
   "main": "./bin/index.js",
   "bin": {
@@ -28,6 +28,7 @@
     "commander": "^2.14.1",
     "cross-spawn": "^6.0.4",
     "fs-extra": "^5.0.0",
-    "inquirer": "^5.1.0"
+    "inquirer": "^5.1.0",
+    "ora": "^1.4.0"
   }
 }
