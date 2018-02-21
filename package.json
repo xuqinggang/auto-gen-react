@@ -5,16 +5,26 @@
     "type": "git",
     "url": "https://github.com/xuqinggang/auto-gen-react.git"
   },
-  "description": "",
-  "main": "index.js",
+  "bugs": {
+    "url": "https://github.com/xuqinggang/auto-gen-react/issues"
+  },
+  "homepage": "https://github.com/xuqinggang/auto-gen-react#readme",
+  "description": "create multiple app based es6+webpack, eg: react, react+redux",
+  "keywords": [
+      "npm",
+      "create-react-app",
+      "generate-react",
+      "react-cli"
+  ],
+  "main": "./bin/index.js",
   "bin": {
     "auto-gen-react": "./bin/index.js"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "author": "xuqinggang",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
+    "chalk": "^2.3.1",
     "commander": "^2.14.1",
     "cross-spawn": "^6.0.4",
     "fs-extra": "^5.0.0",

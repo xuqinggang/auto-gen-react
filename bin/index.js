@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * 前端脚手架
  * author xuqinggang
@@ -6,14 +7,19 @@
 const program = require('commander');
 const inquirer = require('inquirer');
 const path = require('path')
-
+const chalk = require('chalk');
+const packageJson = require('../package.json');
 const createApp = require('./createApp');
-// const outputVersion = () => {
-//     console.log(packageJson.version);
-// };
-// program
-//     .description('快站前端工具')
-//     .option('-v, --version', '输出版本号', outputVersion);
+
+program
+    .description(chalk.blue(`
+        脚手架
+        es6+webpack
+        es6+webpack+react
+        es6+webpack+react+redux
+        `))
+    .usage(`${chalk.green('create <project-directory>')} [options]`)
+    .option('-v, --version', '版本号', () => { console.log(packageJson.version) });
 
 program
     .command('create [project-name]')
@@ -35,4 +41,4 @@ program
         }
     })
 
-program.parse(process.argv)
+program.parse(process.argv);
