@@ -43,20 +43,14 @@ const webpackProConf = webpackMerge(webpackBaseConf, {
     },
 
     plugins: [
-
         // 生成asserts json
         new AssetsPlugin({
             filename: 'assets.json',
             path: path.resolve(baseConfig.rootDir, 'dist'),
             prettyPrint: true,
         }),
-
-        // 代码中注入变量
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(baseConfig.env),
-        }),
         
-        // js压缩 此插件压缩比下面的更好
+        // js压缩 经测试此插件压缩比webpack.optimize.UglifyJsPlugin插件效果好
         new UglifyJsPlugin({
             uglifyOptions: {
                 cache: true,

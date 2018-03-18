@@ -9,10 +9,10 @@ const resolve = dir => path.resolve(baseConfig.rootDir, dir);
 
 const webpackBaseConf = {
     entry: {
-        index: resolve('src/index.js'),
+        index: resolve('src/application/App/index.js'),
 
         vendors: [
-            'babel-polyfill',
+            '@babel/polyfill',
             'react',
             'react-dom',
             'react-router',
@@ -42,6 +42,11 @@ const webpackBaseConf = {
     },
 
     plugins: [
+        // 代码中注入变量
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify(baseConfig.nodeEnv),
+        }),
+        
         // 不需要require便可直接饮用
         new webpack.ProvidePlugin({
             // ReactJS module name in node_modules folder

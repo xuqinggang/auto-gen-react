@@ -22,7 +22,7 @@ program
     .option('-v, --version', '版本号', () => { console.log(packageJson.version) });
 
 program
-    .command('create [project-name]')
+    .command('create [project name]')
     .description('创建新项目')
     .action(async (projectName) => {
         if (!projectName) {

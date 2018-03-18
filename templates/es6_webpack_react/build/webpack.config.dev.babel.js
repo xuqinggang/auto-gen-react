@@ -49,10 +49,6 @@ const webpackDevConf = webpackMerge(webpackBaseConf, {
     },
 
     plugins: [
-        // 代码中注入变量
-        new webpack.DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify(baseConfig.env),
-        }),
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin({
             // Options...
