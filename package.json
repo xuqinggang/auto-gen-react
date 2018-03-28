@@ -20,7 +20,6 @@
   "bin": {
     "auto-gen-react": "./bin/index.js"
   },
-  "devDependencies": {},
   "author": "xuqinggang",
   "license": "MIT",
   "dependencies": {
