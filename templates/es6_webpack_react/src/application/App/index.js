@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import createHistory from 'history/createBrowserHistory';
 
 // 全局样式
-import 'styles/index';
+import 'styles/index.less';
 
 const history = createHistory();
 
